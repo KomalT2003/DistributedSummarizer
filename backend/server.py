@@ -12,11 +12,13 @@ def extract_text_from_pdf(pdf_path):
     return text_content
 
 def handle_client(client_socket):
+    # Receive PDF file path
     pdf_path = client_socket.recv(1024).decode('utf-8')
 
     if not os.path.isfile(pdf_path):
         client_socket.send(b"Invalid PDF file path.")
         return
+
     extracted_text = extract_text_from_pdf(pdf_path)
 
     client_socket.send(extracted_text.encode('utf-8'))
@@ -24,7 +26,6 @@ def handle_client(client_socket):
     client_socket.close()
 
 def start_server():
-    
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     server_socket.bind(('localhost', 5555))
 
@@ -32,10 +33,11 @@ def start_server():
     print("Server listening on port 5555...")
 
     while True:
-        
         client_socket, client_address = server_socket.accept()
         print(f"Accepted connection from {client_address}")
+
         handle_client(client_socket)
 
 if __name__ == "__main__":
     start_server()
+
