@@ -8,7 +8,7 @@ def pdf_to_text(pdf_path):
         pdf_reader = PyPDF2.PdfReader(pdf_file)
 
         # Initialize Pyro4 proxy to connect to the RMI server
-        text_processor = Pyro4.Proxy("PYRO:text_processor@localhost:9090")
+        text_processor = Pyro4.Proxy("PYRO:text_processor@localhost:9091")
 
         for page_num in range(len(pdf_reader.pages)):
             page = pdf_reader.pages[page_num]
