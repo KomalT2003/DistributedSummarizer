@@ -1,7 +1,0 @@
-❖
-Code
-Snippet:
-1)
-Reusable
-lamport
-class
