@@ -17,6 +17,6 @@ def pdf_to_text(pdf_path):
             text_processor.process_text(page_num + 1, text)
 
 if __name__ == "__main__":
-    pdf_path = 'Experiment 04.pdf'
+    pdf_path = '/Users/shankerltarachandani/Downloads/PlacesInIndia.pdf'
     pdf_to_text(pdf_path)
     print("PDF converted and text sent to server successfully!")

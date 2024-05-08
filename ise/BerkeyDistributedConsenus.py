@@ -12,7 +12,7 @@ class NodeState:
     CANDIDATE = 1
     LEADER = 2
 
-# Simulating network of nodes with local clocks
+# local clocks 
 class Node:
     def __init__(self, node_id):
         self.node_id = node_id

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Page</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        .font-serif {
+            font-family: serif;
+        }
+        .text-slate-600 {
+            color: #6b7280;
+        }
+    </style>
+</head>
+<body class="flex flex-col justify-center items-center bg-gray-100">
+    <div class="flex flex-col mx-auto items-center justify-center ">
+        <div class="mx-40 mt-56 ">
+            <h1 class="my-30  text-center text-5xl font-serif font-bold text-slate-600">
+                Get Summary of your file !! 
+            </h1>
+        </div>
+        <div class="mx-40 mt-20">
+            <form action="http://127.0.0.1:3500/upload" method="post" enctype="multipart/form-data" class="bg-white shadow-md rounded-md p-6">
+                <input type="file" name="file" class="border border-gray-300 p-2 rounded-md mb-4" />
+                <button type="submit" class="bg-blue-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:bg-blue-600">
+                    Upload File
+                </button>
+            </form>
+        </div>
+        
+    </div>
+</body>
+</html>
